@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@font-face {
+    font-family: 'Retro';
+    src: url('retro.ttf');
   }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Retro';
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    background-color: black;
 }
 
-.App-link {
-  color: #61dafb;
+#content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#textbox { 
+    min-height: 200px;
+    color: #666869;
+    line-height: 2em;
+    font-size: 15px;
+}
+
+#sprite {
+    height: 200px;
+    width: auto;
+    margin-right: 20px;
+}
+
+#bottom {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #d7d0ffcf;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1vh;
+    width: 50vw;
+    margin: auto; 
+}
+
+#main-img {
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #d7d0ff3f;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5vh;
+    max-height: 60vh;
+    width: auto;
+    margin: auto; 
+    animation: fadein 2s ease-in;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+#fill {
+    background-color: #202122;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content > * {
+    animation: fadein 2s;
+}
+
+#bg {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('bg2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+}
+
+#start-button {
+  background: #d7d0ff;
+  border-radius: 999px;
+  box-shadow: #d7d0ff 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
 }

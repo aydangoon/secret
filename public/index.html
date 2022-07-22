@@ -25,6 +25,40 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style media="screen">
+      * {
+     margin: 0;
+     padding: 0;
+   }
+ 
+
+
+
+   hr {
+     width: 50px;
+     border-color: transparent;
+     border-right-color: rgba(255, 255, 255, 0.7);
+     border-right-width: 50px;
+     position: absolute;
+     bottom: 100%;
+     transform-origin: 100% 50%;
+     animation-name: rain;
+     animation-duration: 1s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+     z-index: -1;
+   }
+
+   @keyframes rain {
+     from {
+       transform: rotate(105deg) translateX(0);
+     } 
+     to {
+       transform: rotate(105deg) translateX(calc(100vh + 20px));
+     }
+   }
+
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -40,4 +74,6 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script type="text/javascript"></script>  
+  </script>
 </html>
